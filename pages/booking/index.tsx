@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 
 export default function BookingForm() {
-  const [formData, setFormData] = useState({
+  const [formData] = useState({
     firstName: "",
     lastName: "",
     email: "",
@@ -17,29 +17,33 @@ export default function BookingForm() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  interface BookingFormData {
-    firstName: string;
-    lastName: string;
-    email: string;
-    phoneNumber: string;
-    cardNumber: string;
-    expirationDate: string;
-    cvv: string;
-    billingAddress: string;
-  }
+  // interface BookingFormData {
+  //   firstName: string;
+  //   lastName: string;
+  //   email: string;
+  //   phoneNumber: string;
+  //   cardNumber: string;
+  //   expirationDate: string;
+  //   cvv: string;
+  //   billingAddress: string;
+  // }
 
-  interface HandleSubmitEvent extends React.FormEvent<HTMLFormElement> {}
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
 
-  const handleSubmit = async (e: HandleSubmitEvent): Promise<void> => {
     e.preventDefault();
     setLoading(true);
     setError("");
 
     try {
       const response = await axios.post("/api/bookings", formData);
-      alert("Booking confirmed!");
+      console.log("Booking successful:", response.data);
+ 
+    
     } catch (error) {
+       console.error("Booking failed:", error);
       setError("Failed to submit booking.");
+
+
     } finally {
       setLoading(false);
     }

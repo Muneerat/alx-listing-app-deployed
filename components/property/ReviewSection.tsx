@@ -27,6 +27,7 @@ const ReviewSection = ({ propertyId }: ReviewSectionProps) => {
   if (loading) {
     return <p>Loading reviews...</p>;
   }
+  if(reviews) return <p></p>
 
   return (
     <div>

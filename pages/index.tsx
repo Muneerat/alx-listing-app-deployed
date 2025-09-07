@@ -1,18 +1,8 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-import Card from "@/components/common/Card";
+
+// import Card from "@/components/common/Card";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export default function Home() {
   const [properties, setProperties] = useState([]);
@@ -37,6 +27,7 @@ export default function Home() {
   if(loading) {
     return <p>Loadin</p>
   }
+  if (properties) return <p>t</p>
   return (
    <div className="grid grid-cols-3 gap-4">
     {/* {properties.map((property) => (
