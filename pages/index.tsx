@@ -39,9 +39,9 @@ export default function Home() {
   }
   return (
    <div className="grid grid-cols-3 gap-4">
-    {properties.map((property) => (
+    {/* {properties.map((property) => (
       <PropertyCard key={property.id} property={property} />
-    ))}
+    ))} */}
    </div>
   );
 }

@@ -31,5 +31,6 @@ export default function PropertyDetailPage(){
         return <p>Property not found</p>
     }
 
-    return <PropertyDetail property={property} />
+    return <div></div>
+    // <PropertyDetail property={property} />
 }

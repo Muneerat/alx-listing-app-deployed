@@ -3,7 +3,8 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Card from "../common/Card";
 
-const Layout = ({ children }) => {
+
+const Layout = ({ children }: React.PropsWithChildren<{}>) => {
   return (
     <>
       <Header />

@@ -15,12 +15,25 @@ export default function BookingForm() {
   });
 
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState("");
 
-  const handleSubmit = async (e) => {
+  interface BookingFormData {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phoneNumber: string;
+    cardNumber: string;
+    expirationDate: string;
+    cvv: string;
+    billingAddress: string;
+  }
+
+  interface HandleSubmitEvent extends React.FormEvent<HTMLFormElement> {}
+
+  const handleSubmit = async (e: HandleSubmitEvent): Promise<void> => {
     e.preventDefault();
     setLoading(true);
-    setError(null);
+    setError("");
 
     try {
       const response = await axios.post("/api/bookings", formData);
