@@ -1,5 +1,22 @@
 import { PropertyProps } from "@/interfaces";
 import mansion from "@/public/assets/mansion.svg";
+import farm from "@/public/assets/farm.svg";
+import home from "@/public/assets/home1.svg";
+import livingRoom from "@/public/assets/living-room.svg";
+import vila from "@/public/assets/villa.svg";
+import palmTree from "@/public/assets/palm-tree.svg";
+import keyChain from "@/public/assets/key-chain.svg";
+import swimming from "@/public/assets/swimming-pool.svg";
+import vacation from "@/public/assets/vacations.svg";
+import island from "@/public/assets/island.svg";
+import tent from "@/public/assets/tent.svg";
+import Apartment from "@/public/assets/apartment.svg";
+import Lakefront from "@/public/assets/cottage.svg";
+import farmHouse from "@/public/assets/barn.svg";
+import Treehouse from "@/public/assets/treehouse.svg";
+import cabin from "@/public/assets/cabin.svg";
+import Castles from "@/public/assets/castle-tower.svg";
+import product1 from "@/public/assets/product1.svg";
 
 export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
   {
@@ -366,93 +383,146 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
 
 export const ImageCarousel = [
   {
-    src: mansion,
-    alt: "mansion ",
-    caption: "mansion",
+    src: livingRoom,
+    alt: "livingRoom ",
+    caption: "Room",
   },
   {
     src: mansion,
     alt: "mansion ",
-    caption: "mansion",
+    caption: "Mansion",
   },
   {
-    src: mansion,
-    alt: "mansion ",
-    caption: "mansion",
+    src: farm,
+    alt: "country side ",
+    caption: "Countryside",
   },
   {
-    src: mansion,
-    alt: "mansion ",
-    caption: "mansion",
+    src: vila,
+    alt: "vila ",
+    caption: "Vila",
   },
   {
-    src: mansion,
-    alt: "mansion ",
-    caption: "mansion",
+    src: palmTree,
+    alt: "palmTree ",
+    caption: "Tropical",
   },
   {
-    src: mansion,
-    alt: "mansion ",
-    caption: "mansion",
+    src: keyChain,
+    alt: "keyChain ",
+    caption: "New",
   },
   {
-    src: mansion,
-    alt: "mansion ",
-    caption: "mansion",
+    src: swimming,
+    alt: "swimming ",
+    caption: "Amazing pool",
   },
   {
-    src: mansion,
-    alt: "mansion ",
-    caption: "mansion",
+    src: vacation,
+    alt: "vacation ",
+    caption: "Beach house",
   },
   {
-    src: mansion,
-    alt: "mansion ",
-    caption: "mansion",
+    src: island,
+    alt: "island ",
+    caption: "Island",
   },
   {
-    src: mansion,
-    alt: "mansion ",
-    caption: "mansion",
+    src: tent,
+    alt: "tent ",
+    caption: "Camping",
   },
   {
-    src: mansion,
-    alt: "mansion ",
-    caption: "mansion",
+    src: Apartment,
+    alt: "Apartment ",
+    caption: "Apartment",
   },
   {
-    src: mansion,
-    alt: "mansion ",
-    caption: "mansion",
+    src: home,
+    alt: "home ",
+    caption: "House",
   },
   {
-    src: mansion,
-    alt: "mansion ",
-    caption: "mansion",
+    src: Lakefront,
+    alt: "Lakefront ",
+    caption: "Lakefront",
   },
   {
-    src: mansion,
-    alt: "mansion ",
-    caption: "mansion",
+    src: farmHouse,
+    alt: "Farm house ",
+    caption: "Farm house",
   },
   {
-    src: mansion,
-    alt: "mansion ",
-    caption: "mansion",
+    src: Treehouse,
+    alt: "Treehouse ",
+    caption: "Treehouse",
   },
   {
-    src: mansion,
-    alt: "mansion ",
-    caption: "mansion",
+    src: cabin,
+    alt: "cabin ",
+    caption: "Cabins",
   },
   {
-    src: mansion,
-    alt: "mansion ",
-    caption: "mansion",
+    src: Castles,
+    alt: "Castles ",
+    caption: "Castles",
   },
   {
-    src: mansion,
-    alt: "mansion ",
-    caption: "mansion",
+    src: farm,
+    alt: "farm ",
+    caption: "Lake",
   },
+];
+
+export const allProducts = [
+  {
+    id: 1,
+    name: "Villa Arrecife Beach House",
+    categories: ["Top Villa", "Self CheckIn", "Free Reschedule"],
+    img: product1,
+    person: "2-4",
+    shower: "2",
+    room: "4",
+    price: "$2,450",
+    location: "Sideman, Bali, Indonesia"
+  },
+    {
+    id: 1,
+    name: "Villa Arrecife Beach House",
+    categories: ["Top Villa", "Self CheckIn", "Free Reschedule"],
+    img: product1,
+    person: "2-4",
+    shower: "2",
+    room: "4",
+    price: "$2,450",
+    location: "Sideman, Bali, Indonesia"
+  },
+    {
+    id: 1,
+    name: "Villa Arrecife Beach House",
+    categories: ["Top Villa", "Self CheckIn", "Free Reschedule"],
+    img: product1,
+    person: "2-4",
+    shower: "2",
+    room: "4",
+    price: "$2,450",
+    location: "Sideman, Bali, Indonesia"
+  },
+    {
+    id: 1,
+    name: "Villa Arrecife Beach House",
+    categories: ["Top Villa", "Self CheckIn", "Free Reschedule"],
+    img: product1,
+    person: "2-4",
+    shower: "2",
+    room: "4",
+    price: "$2,450",
+    location: "Sideman, Bali, Indonesia"
+  },
+  // { id: 2, name: "Cabin Retreat", category: "Free Schedule" },
+  // { id: 3, name: "City Apartment", category: "Self Check-in" },
+  // { id: 4, name: "Luxury Villa 2", category: "Top Villa" },
+  // { id: 5, name: "Oceanfront Condo", category: "Instant Book" },
+  // { id: 6, name: "Cozy Cottage", category: "Free Schedule" },
+  // { id: 7, name: "Mountain Chalet", category: "Self Check-in" },
 ];

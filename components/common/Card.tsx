@@ -3,38 +3,51 @@ import HOUSE_IMAGE from "@/public/assets/image 10.svg";
 import STAR_IMAGE from "@/public/assets/image 13.svg";
 import React from "react";
 import Pill from "./Pill";
+import { PropertyCardProps, PropertyProps } from "@/interfaces";
+import { Star } from "lucide-react";
 
-const Card: React.FC = () => {
+const Card: React.FC<PropertyCardProps> = ({
+  image,
+  categories,
+  room,
+  shower,
+  person,
+  price,
+  name,
+  location
+
+}) => {
   return (
-    <div className="h-[422px] w-[378.56px] cursor-pointer hover:shadow-md hover:rounded-lg ">
+    <div className="pb-8 w-full cursor-pointer hover:shadow-md hover:rounded-lg ">
       <Image
         className="rounded-lg"
-        src={HOUSE_IMAGE}
-        width={378.56}
-        height={299.37}
+        src={image}
+        width={260}
+        height={290}
         alt="house image"
       />
-      <div className="p-2 flex gap-2 mt-2">
-        <Pill title="Top Villa" />
-        <Pill title="Self CheckIn" />
-        <Pill title="Free Reschedule" />
+      <div className="p-1 flex flex-wrap gap-2 mt-2">
+        {categories.map((category, index) => (
+          <Pill title={category} />
+        ))}
       </div>
-      <div className="flex items-center justify-between">
+      <div className="flex items- justify-between px-3">
         <div>
-          <h3 className=" font-semibold text-[22px]">
-            Villa Arrecife Beach House
+          <h3 className=" font-semibold text-[18 text-base">
+           {name}
           </h3>
-          <p className=" font-medium text=[17px] text-[#929292]">
-            Sideman, Bali, Indonesia
+          <p className=" font-medium text-sm text-[#929292]">
+            {location}
           </p>
         </div>
-        <div className="flex items-center">
-          <Image src={STAR_IMAGE} alt="star" />
-          <p className=" font-medium text=[17px] ml-2">4.76</p>
+        <div className="flex py-2">
+          {/* <Star className="text-amber-500 " /> */}
+          {/* <Image src={STAR_IMAGE} alt="star" /> */}
+          <p className=" font-medium text-xs ml-2">4.76</p>
         </div>
       </div>
 
-      <div className="flex justify-between mt-4">
+      <div className="flex justify-between mt-4 px-3">
         <div className=" grid grid-cols-3 border w-[156px] rounded-full px-2 py-1">
           <div className="flex items-center">
             <svg
@@ -53,7 +66,7 @@ const Card: React.FC = () => {
                 fill="#131212"
               />
             </svg>
-            <p className="ml-1 text-[12.95px] font-medium">4</p>
+            <p className="ml-1 text-[12.95px] font-medium">{room}</p>
           </div>
           <div className="flex items-center">
             <svg
@@ -85,7 +98,7 @@ const Card: React.FC = () => {
               </defs>
             </svg>
 
-            <p className="ml-1 text-[12.95px] font-medium">2</p>
+            <p className="ml-1 text-[12.95px] font-medium">{shower}</p>
           </div>
           <div className="flex items-center">
             <svg
@@ -101,11 +114,12 @@ const Card: React.FC = () => {
               />
             </svg>
 
-            <p className="ml-1 text-[12.95px] font-medium">2-4</p>
+            <p className="ml-1 text-[12.95px] font-medium">{person}</p>
           </div>
         </div>
-        <p className=" text-[22px] font-semibold">
-          $2,450<span className=" text-[14px] text-[#787878]">/n</span>
+        <p className=" text-[16px] font-semibold">
+          {price}
+          <span className=" text-[14px] text-[#787878]">/n</span>
         </p>
       </div>
     </div>

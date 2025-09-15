@@ -20,6 +20,18 @@ export interface PropertyProps {
   image: string;
   discount: string;
 }
+export interface PropertyCardProps {
+  name: string;
+  location: string;
+  room: string;
+  shower: string;
+  person: string;
+  categories: string[];
+  price: string;
+  offers?: string;
+  image: string;
+  discount?: string;
+}
 
 export interface PillProps {
   title: string;

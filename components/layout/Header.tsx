@@ -4,28 +4,48 @@ import bag from "@/public/assets/bag.svg";
 import logo from "@/public/assets/logo.svg";
 import Button from "../common/Button";
 import { ImageCarousel } from "@/constants";
+import { Search } from "lucide-react";
 
 const Header = () => {
   return (
     <header>
       {/* top header */}
-      <div className=" text-sm bg-[#34967C] flex justify-center items-center py-3 gap-3">
+      <div className=" text-sm bg-[#34967C] flex justify-center items-center py-3 gap-3 ">
         <Image src={bag} alt="bag" />
-        <p>Overseas trip? Get the latest information on travel guides</p>
+        <p className="text-white">Overseas trip? Get the latest information on travel guides</p>
         <div className="bg-black text-white rounded-full py-1.5 px-3">
           <p>More info</p>
         </div>
       </div>
       {/* main header */}
-      <nav className="flex justify-between items-center pt-3 px-6 bg-white ">
+      <nav className="flex justify-between items-center pt-3  bg-white max-w-[1400px] mx-auto">
         <Image src={logo} alt="logo" className="w-32 h-10" />
-        <div>
-          <input
-            type="serch"
-            placeholder="Search for properties, cities, or landmarks"
-            className="border border-gray-300 rounded-full px-4 py-2 w-96 focus:outline-none focus:ring-2 focus:ring-[#34967C]"
-          />
+    
+        <form className="border-1 border-[#F6F6F6] rounded-4xl pl-8 pr-2 py-3 flex  w-full max-w-3xl  ">
+        <div className="flex flex-col shrink-2 flex-2 pr-4">
+          <h5 className="text-sm font-medium text-[#161117]">Location</h5>
+          <input type="text" placeholder="Search for destination" className="text-[#BEBEBE] text-[13px] font-medium focus:outline-0 outline-0 " />
+         
         </div>
+        <div className="flex flex-col pl-4 pr-2 border-[#E9E9E9] border-l">
+          <h5 className="text-sm font-medium text-[#161117]">Check in</h5>
+          <input type="text" placeholder="Add date" className="text-[#BEBEBE] text-[13px] font-medium focus:outline-0 outline-0 w-22" />
+         
+        </div>
+        <div className="flex flex-col  pl-4 pr-2 border-[#E9E9E9] border-l">
+          <h5 className="text-sm font-medium text-[#161117]">Check out</h5>
+          <input type="text" placeholder="Add date" className="text-[#BEBEBE] text-[13px] font-medium focus:outline-0 outline-0 w-22" />
+         
+        </div>
+        <div className="flex flex-col shrink-2 pl-4 pr-2 border-[#E9E9E9] border-l">
+          <h5 className="text-sm font-medium text-[#161117]">People</h5>
+          <input type="text" placeholder="Add guest" className="text-[#BEBEBE] text-[13px] font-medium focus:outline-0 outline-0 w-22" />
+         
+        </div>
+        <div className="h-11 w-11 bg-[#FFA800] rounded-full flex justify-center items-center">
+          <Search className="text-white size-6" />
+        </div>
+        </form>
         <div className="flex items-center gap-4">
           <Button text="Sign in" style="text-white" />
           <Button
@@ -35,13 +55,14 @@ const Header = () => {
         </div>
       </nav>
       {/* images carousel */}
-      <div className=" w-full flex justify-between mt-4 border-t border-gray-300 py-4 px-4">
+      <div className="border-t border-gray-300 my-4 "></div>
+      <div className=" w-full max-w-[1350px] flex justify-between gap-4 my-4 mx-auto  px-4 md:px-0 overflow-auto">
         {ImageCarousel.map((image, index) => (
-          <div key={index} className="">
-            <Image src={image.src} alt={image.alt} width={40} height={40} />
-            <div className="text-[#616161]">
-              <p>{image.caption}</p>
-            </div>
+          <div key={index} className="flex justify-center items-center flex-col w-full hover:border-b-2 py-4 border-[#0F4E3D] ">
+            <Image src={image.src} alt={image.alt} width={35} height={35} />
+           
+              <p className="text-center text-xs w-max text-[#616161]">{image.caption}</p>
+         
           </div>
         ))}
       </div>

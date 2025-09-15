@@ -25,7 +25,7 @@ export default function Home() {
   },[])
 
   if(loading) {
-    return <p>Loadin</p>
+    return <p>Loading</p>
   }
   if (properties) return <p>t</p>
   return (
