@@ -1,9 +1,6 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import Card from "../common/Card";
-import Main from "./Main";
-import ProductsTabs from "../property/productTabs";
 
 
 const Layout = ({ children }: React.PropsWithChildren) => {

@@ -1,10 +1,7 @@
 import Image from "next/image";
-import HOUSE_IMAGE from "@/public/assets/image 10.svg";
-import STAR_IMAGE from "@/public/assets/image 13.svg";
 import React from "react";
 import Pill from "./Pill";
-import { PropertyCardProps, PropertyProps } from "@/interfaces";
-import { Star } from "lucide-react";
+import { PropertyCardProps, } from "@/interfaces";
 
 const PropertyCard: React.FC<PropertyCardProps> = ({
   image,
@@ -43,7 +40,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
 
       <div className="p-1 flex flex-wrap gap-2 mt-2">
         {categories.map((category, index) => (
-          <Pill title={category} />
+          <Pill key={index} title={category} />
         ))}
       </div>
       <div className="flex items- justify-between px-3">

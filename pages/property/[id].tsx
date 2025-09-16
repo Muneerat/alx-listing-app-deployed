@@ -2,9 +2,6 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-import { allProducts } from "@/constants";
-import { useParams } from "next/navigation";
-
 export default function PropertyDetailPage(){
     const router = useRouter()
     const {id} = router.query;
@@ -24,7 +21,7 @@ export default function PropertyDetailPage(){
                 setLoading(false);
             }
         }
-        // fetchProperty()
+         fetchProperty()
     },[id])
 
     if(loading){

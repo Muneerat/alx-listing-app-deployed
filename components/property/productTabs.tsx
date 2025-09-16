@@ -1,8 +1,5 @@
 import { Filter } from "lucide-react";
 import { useState } from "react";
-import Card from "../common/Card";
-import { allProducts } from "@/constants";
-import Home from "@/pages";
 
 const ProductsTabs = () => {
   const [activeTab, setActiveTab] = useState("All");
@@ -14,11 +11,6 @@ const ProductsTabs = () => {
     "Self CheckIn",
     "Instant Book",
   ];
- const filteredProducts =
-  activeTab === "All"
-    ? allProducts
-    : allProducts.filter((product) => product.categories.includes(activeTab));
-
   return (
     <div className="max-w-[1350] mx-auto flex flex-col">
       <div className="flex gap-3 flex-wrap my-8 justify-between">
