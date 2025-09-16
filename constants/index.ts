@@ -17,6 +17,21 @@ import Treehouse from "@/public/assets/treehouse.svg";
 import cabin from "@/public/assets/cabin.svg";
 import Castles from "@/public/assets/castle-tower.svg";
 import product1 from "@/public/assets/product1.svg";
+import product2 from "@/public/assets/product2.svg";
+import product3 from "@/public/assets/product3.svg";
+import product4 from "@/public/assets/product4.svg";
+import product5 from "@/public/assets/product5.svg";
+import product6 from "@/public/assets/product6.svg";
+import product7 from "@/public/assets/product7.svg";
+import product8 from "@/public/assets/product8.svg";
+import product9 from "@/public/assets/product9.svg";
+import product10 from "@/public/assets/product10.svg";
+import product11 from "@/public/assets/product11.svg";
+import product12 from "@/public/assets/product12.svg";
+import product13 from "@/public/assets/product13.svg";
+import product14 from "@/public/assets/product14.svg";
+import product15 from "@/public/assets/product15.svg";
+import product16 from "@/public/assets/product16.svg";
 
 export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
   {
@@ -484,45 +499,172 @@ export const allProducts = [
     shower: "2",
     room: "4",
     price: "$2,450",
-    location: "Sideman, Bali, Indonesia"
+    location: "Sideman, Bali, Indonesia",
+    discount: "60% Off"
   },
     {
-    id: 1,
-    name: "Villa Arrecife Beach House",
+    id: 2,
+    name: "Entire cabin ",
     categories: ["Top Villa", "Self CheckIn", "Free Reschedule"],
-    img: product1,
-    person: "2-4",
-    shower: "2",
-    room: "4",
-    price: "$2,450",
-    location: "Sideman, Bali, Indonesia"
+    img: product2,
+    person: "3",
+    shower: "1",
+    room: "1",
+    price: "$62",
+    location: "Nova Friburgo, Brazil"
   },
     {
-    id: 1,
-    name: "Villa Arrecife Beach House",
+    id: 3,
+    name: "Earthen home ",
     categories: ["Top Villa", "Self CheckIn", "Free Reschedule"],
-    img: product1,
-    person: "2-4",
+    img: product3,
+    person: "6",
     shower: "2",
     room: "4",
-    price: "$2,450",
-    location: "Sideman, Bali, Indonesia"
+    price: "$386",
+    location: "Santa Marta, Colombia"
   },
     {
-    id: 1,
-    name: "Villa Arrecife Beach House",
+    id: 4,
+    name: "Private room ",
     categories: ["Top Villa", "Self CheckIn", "Free Reschedule"],
-    img: product1,
-    person: "2-4",
-    shower: "2",
-    room: "4",
-    price: "$2,450",
-    location: "Sideman, Bali, Indonesia"
+    img: product4,
+    person: "2",
+    shower: "1",
+    room: "1",
+    price: "$134",
+    location: "Moeda, Brazil"
   },
-  // { id: 2, name: "Cabin Retreat", category: "Free Schedule" },
-  // { id: 3, name: "City Apartment", category: "Self Check-in" },
-  // { id: 4, name: "Luxury Villa 2", category: "Top Villa" },
-  // { id: 5, name: "Oceanfront Condo", category: "Instant Book" },
-  // { id: 6, name: "Cozy Cottage", category: "Free Schedule" },
-  // { id: 7, name: "Mountain Chalet", category: "Self Check-in" },
+  {
+    id: 5,
+    name: "Gokce Gemile Estate",
+    categories: ["Top Villa", "Self CheckIn", "Free Reschedule"],
+    img: product5,
+    person: "12",
+    shower: "6",
+    room: "6",
+    price: "$980",
+    location: "Kayaköy, Turkey"
+  },
+    {
+    id: 6,
+    name: "Luxury 1000 sqm Villa...",
+    categories: ["Top Villa", "Self CheckIn", "Free Reschedule"],
+    img: product6,
+    person: "12",
+    shower: "6",
+    room: "6",
+    price: "$1,430",
+    location: "Marrakech, Morocco"
+  },
+    {
+    id: 7,
+    name: "Palais Hassoun Marrakech",
+    categories: ["Top Villa", "Self CheckIn", "Free Reschedule"],
+    img: product7,
+    person: "26",
+    shower: "13",
+    room: "13",
+    price: "$3,450",
+    location: "Marrakech, Morocco"
+  },
+  {
+    id: 8,
+    name: "Villa Lamp",
+    categories: ["Top Villa", "Self CheckIn", "Free Reschedule"],
+    img: product8,
+    person: "12",
+    shower: "7",
+    room: "7",
+    price: "$2,041",
+    location: "Benahavis, Spain"
+  },
+    {
+    id: 9,
+    name: "Villa l 'Oui d' Or",
+    categories: ["Top Villa", "Self CheckIn", "Free Reschedule"],
+    img: product9,
+    person: "14",
+    shower: "7",
+    room: "8",
+    price: "$1,009",
+    location: "Marrakech, Morocco"
+  },
+    {
+    id: 10,
+    name: "Designer villa, pool not ...",
+    categories: ["Top Villa", "Self CheckIn", "Free Reschedule"],
+    img: product10,
+    person: "16",
+    shower: "21",
+    room: "12",
+    price: "$1,289",
+    location: "Marrakech, Morocco"
+  },
+  {
+    id: 11,
+    name: "Royal Zephyr - Marrakech",
+    categories: ["Top Villa", "Self CheckIn", "Free Reschedule"],
+    img: product16,
+    person: "12",
+    shower: "7",
+    room: "7",
+    price: "$1,692",
+    location: "Marrakesh, Morocco"
+  },
+    {
+    id: 12,
+    name: "Rïad Mayo & Bungalows",
+    categories: ["Top Villa", "Self CheckIn", "Free Reschedule"],
+    img: product11,
+    person: "16+",
+    shower: "18",
+    room: "21",
+    price: "$865",
+    location: "Sidi Abdallah Ghiat, Morocco"
+  },
+    {
+    id: 13,
+    name: "Casa de Carolina",
+    categories: ["Book Now Pay Later", "Self CheckIn", "Free Reschedule"],
+    img: product12,
+    person: "4",
+    shower: "1",
+    room: "1",
+    price: "$215",
+    location: "Playas de Vera, Spain"
+  },
+   {
+    id: 14,
+    name: "Happy Valley Villa, Tuni...",
+    categories: ["Top Villa", "Self CheckIn", "Free Reschedule"],
+    img: product13,
+    person: "8",
+    shower: "3",
+    room: "7",
+    price: "$100",
+    location: "Qaroun, Egypt"
+  },
+    {
+    id: 15,
+    name: "Almyros Residence ",
+    categories: ["Top Villa", "Self CheckIn", "Free Reschedule"],
+    img: product14,
+    person: "10",
+    shower: "4",
+    room: "6",
+    price: "$865",
+    location: "Lasithi, Greece"
+  },
+    {
+    id: 16,
+    name: "Villa White Stone mode...",
+    categories: ["Instant Book", "Self CheckIn", ],
+    img: product15,
+    person: "12",
+    shower: "6",
+    room: "7",
+    price: "$1,798",
+    location: "Marrakech, Morocco"
+  },
 ];

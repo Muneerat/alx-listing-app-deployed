@@ -6,7 +6,7 @@ import Pill from "./Pill";
 import { PropertyCardProps, PropertyProps } from "@/interfaces";
 import { Star } from "lucide-react";
 
-const Card: React.FC<PropertyCardProps> = ({
+const PropertyCard: React.FC<PropertyCardProps> = ({
   image,
   categories,
   room,
@@ -14,18 +14,33 @@ const Card: React.FC<PropertyCardProps> = ({
   person,
   price,
   name,
-  location
-
+  location,
+  discount,
 }) => {
   return (
-    <div className="pb-8 w-full cursor-pointer hover:shadow-md hover:rounded-lg ">
-      <Image
-        className="rounded-lg"
-        src={image}
-        width={260}
-        height={290}
-        alt="house image"
-      />
+    <div className="pb-8 w-full cursor-pointer hover:shadow-md hover:rounded-lg relative ">
+      <Image className="rounded-lg max-w-full " src={image} alt="house image" />
+      {discount && (
+        <div className="flex gap-2 bg-[#3eb696] items-center text-white absolute top-4 -left-1 rounded-t-3xl rounded-br-3xl p-2">
+          <svg
+            width="17"
+            height="17"
+            viewBox="0 0 17 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8.04056 0.264116L5.97596 2.74164H2.55322C2.1677 2.74164 1.87445 3.08781 1.93783 3.46808L2.33666 5.86104L0.144619 8.49148C-0.0790879 8.75993 -0.0387057 9.15976 0.234163 9.37805L2.33666 11.06V14.0755C2.33666 14.42 2.61598 14.6993 2.96054 14.6993H5.97596L7.56839 16.6899C7.81815 17.0021 8.29297 17.0021 8.54273 16.6899L10.1352 14.6993H13.6705C14.015 14.6993 14.2944 14.42 14.2944 14.0755V11.06L16.3969 9.37805C16.6697 9.15976 16.7101 8.75993 16.4864 8.49148L14.2944 5.86104V3.36552C14.2944 3.02096 14.015 2.74164 13.6705 2.74164H10.6551L9.03894 0.317448C8.80761 -0.0295411 8.30754 -0.0562548 8.04056 0.264116ZM10.1352 5.86093L4.93616 12.0997L5.73496 12.7654L10.934 6.52659L10.1352 5.86093ZM8.05556 5.86099C8.05556 6.43526 7.59003 6.90079 7.01576 6.90079C6.4415 6.90079 5.97596 6.43526 5.97596 5.86099C5.97596 5.28673 6.4415 4.82119 7.01576 4.82119C7.59003 4.82119 8.05556 5.28673 8.05556 5.86099ZM10.1352 13.1395C10.7094 13.1395 11.175 12.674 11.175 12.0997C11.175 11.5254 10.7094 11.0599 10.1352 11.0599C9.5609 11.0599 9.09536 11.5254 9.09536 12.0997C9.09536 12.674 9.5609 13.1395 10.1352 13.1395Z"
+              fill="white"
+            />
+          </svg>
+
+          {discount}
+        </div>
+      )}
+
       <div className="p-1 flex flex-wrap gap-2 mt-2">
         {categories.map((category, index) => (
           <Pill title={category} />
@@ -33,17 +48,24 @@ const Card: React.FC<PropertyCardProps> = ({
       </div>
       <div className="flex items- justify-between px-3">
         <div>
-          <h3 className=" font-semibold text-[18 text-base">
-           {name}
-          </h3>
-          <p className=" font-medium text-sm text-[#929292]">
-            {location}
-          </p>
+          <h3 className=" font-semibold text-[#161117] text-lg">{name}</h3>
+          <p className=" font-medium text-sm text-[#929292]">{location}</p>
         </div>
         <div className="flex py-2">
-          {/* <Star className="text-amber-500 " /> */}
-          {/* <Image src={STAR_IMAGE} alt="star" /> */}
-          <p className=" font-medium text-xs ml-2">4.76</p>
+          <svg
+            width="17"
+            height="17"
+            viewBox="0 0 19 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.87882 0.784829C9.28949 -0.0399629 10.462 -0.0518123 10.8893 0.764512L12.9788 4.7569L18.0958 5.69706C18.7938 5.82531 19.0515 6.69135 18.5371 7.18031L15.1495 10.4005L15.7957 15.9884C15.8765 16.6879 15.1348 17.1877 14.5168 16.85L9.86414 14.3077L5.2493 16.8293C4.62414 17.1709 3.87631 16.6558 3.9727 15.95L4.73046 10.4005L1.2416 7.18938C0.713539 6.70335 0.969643 5.82292 1.676 5.69597L6.90108 4.7569L8.87882 0.784829Z"
+              fill="#FAC02B"
+            />
+          </svg>
+
+          <p className=" font-medium text-xs ml-1">4.76</p>
         </div>
       </div>
 
@@ -126,4 +148,4 @@ const Card: React.FC<PropertyCardProps> = ({
   );
 };
 
-export default Card;
+export default PropertyCard;

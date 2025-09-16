@@ -2,6 +2,7 @@ import { Filter } from "lucide-react";
 import { useState } from "react";
 import Card from "../common/Card";
 import { allProducts } from "@/constants";
+import Home from "@/pages";
 
 const ProductsTabs = () => {
   const [activeTab, setActiveTab] = useState("All");
@@ -13,10 +14,10 @@ const ProductsTabs = () => {
     "Self CheckIn",
     "Instant Book",
   ];
-  const filteredProducts =
-    activeTab === "All"
-      ? allProducts
-      : allProducts.filter((product) => product.categories === activeTab);
+ const filteredProducts =
+  activeTab === "All"
+    ? allProducts
+    : allProducts.filter((product) => product.categories.includes(activeTab));
 
   return (
     <div className="max-w-[1350] mx-auto flex flex-col">
@@ -52,22 +53,7 @@ const ProductsTabs = () => {
             </button>
           </div>
         </div>
-        <div className="grid gap-4 md:grid-cols-4 sm:grid-cols-3 grid-cols-1">
-        {filteredProducts.map((filteredProduct, index) => (
-          <Card
-            key={index}
-            image={filteredProduct.img}
-            categories={filteredProduct.categories}
-            shower={filteredProduct.shower}
-            room={filteredProduct.room}
-            person={filteredProduct.person}
-            price={filteredProduct.price}
-            name={filteredProduct.name}
-            location={filteredProduct.location}
-
-          />
-        ))}
-        </div>
+       
       </div>
     </div>
   );
