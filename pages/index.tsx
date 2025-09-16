@@ -45,7 +45,7 @@ export default function Home() {
     return <p>Loading</p>;
   }
   return (
-    <div>
+    <div className="p-4">
       <Main />
        <div className="max-w-[1350] mx-auto flex flex-col">
             <div className="flex gap-3 flex-wrap my-8 justify-between">
@@ -83,7 +83,7 @@ export default function Home() {
              
             </div>
           </div>
-      <div className="grid gap-6 md:grid-cols-4 sm:grid-cols-3 grid-cols-1 max-w-[1350] mx-auto py-4">
+      <div className="grid gap-6 md:grid-cols-4  sm:grid-cols-2 grid-cols-1 max-w-[1350] mx-auto ">
         {filteredProducts.map((filteredProduct, index) => (
           <Link
             key={filteredProduct.id}
